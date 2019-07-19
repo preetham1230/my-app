@@ -8,31 +8,9 @@ import Test from './Test.js';
 
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import store from './Store.js'
 
-const initialState ={
-    count: 20
-}
 
-function reducer(state = initialState, action){
-
-switch(action.type){
-
-    case "INCREMENT": 
-        return { 
-            count: state.count + 1
-        };
-
-    case "DECREMENT": 
-        return { 
-            count: state.count - 1
-        };
-
-    default:
-        return state;
-}
-}
-
-const store = createStore(reducer);
 
 export default class Info extends Component {
     render() {
